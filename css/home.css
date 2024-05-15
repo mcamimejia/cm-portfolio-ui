@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --principal:#17181f;
+    --second: #314d4a;
+    --third: #0b8770;
+    --fourth:#a6c288;
+    --fifth: #ebe68d;
+    --white: #ffffff;
+    --invalid : rgba(211, 8, 8,0.5);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+

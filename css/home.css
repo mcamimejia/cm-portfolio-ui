@@ -16,11 +16,16 @@
 }
 
 body {
+    align-items: center;
     background-image: url('../assets/Background.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 a {
@@ -40,13 +45,25 @@ li {
 }
 
 .main-content{
+    align-items: center;
     background-color: var(--main-content);
-    margin: auto;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-evenly;
+    width: 100vw;
 }
 
 .nav-list li{
-    margin: 25px 10px;
+    padding: 25px 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-between;
+    width: 50%;
 }
 
 .profile-info h1{
@@ -55,7 +72,6 @@ li {
     font-weight: bold;
     letter-spacing: 10px;
     line-height: 1.2;
-    padding-top: 50px;
 }
 
 .profile-info h2{
@@ -64,11 +80,14 @@ li {
     font-style: italic;
     line-height: 1.2;
     margin-top: -50px;
+    padding-right: 300px;
+    text-align: center;
 }
 
 .profile-info p {
     color: var(--principal);
-    margin-top: 100px;
+    font-size: 30pt;
+    text-align: end;
 }
 
 .sidebar {
@@ -88,18 +107,21 @@ li {
 .tech-stack-icons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: auto;
-    padding: 20px;
     width: 50%;
 }
 
 .tech-stack-icons svg{
-    height: 50px;
-    margin: 30px;
+    height: 80px;
+}
+
+.tech-icon {
+    padding: 30px;
 }
 
 footer{
+    align-self: flex-end;
     position: relative;
 }
 
@@ -108,13 +130,13 @@ footer{
     flex-direction: column;
     position: absolute;
     right: 10px;
-    top: -130px;
+    top: -110px;
 }
 
 .social svg {
     height: 50px;
     width: 50px;
-    margin: 5px;
+    padding: 5px;
 }
 
 .copyright {

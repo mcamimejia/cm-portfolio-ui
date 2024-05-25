@@ -226,6 +226,48 @@ footer{
     justify-content: space-evenly;
     width: 100vw;
 }
+
+.slider {
+    position: relative
+}
+
+.tech-stack{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 25%;
+}
+ 
+.tech-stack-info svg{
+    width: 100px;
+    cursor: pointer;
+}
   
+
+.tech-stack-info p{
+    font-size: 30pt;
+}
+
+.tech-stack-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
   
+.tech-stack-icons.active {
+    opacity: 1;
+}
+
+.tech-stack-icons.inactive {
+    opacity: 0;
+}
+
+.tech-stack.active {
+    display: block;
+}
+
+.tech-stack.inactive {
+    display: none;
+}
   

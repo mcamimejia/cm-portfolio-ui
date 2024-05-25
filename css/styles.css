@@ -129,6 +129,7 @@ li {
     justify-content: space-around;
     margin: auto;
     width: 50%;
+    transition: 0.6s all ease;
 }
 
 .tech-stack-icons svg{
@@ -236,6 +237,7 @@ footer{
     width: 50%;
     height: 100%;
     left: 25%;
+    transition: 0.6s all ease;
 }
  
 .tech-stack-info svg{
@@ -254,20 +256,22 @@ footer{
     align-items: center;
     height: 100%;
 }
-  
-.tech-stack-icons.active {
+
+.btn svg {
+    cursor: pointer;
+    fill: var(--principal);
+    height: 80px;
+    position: absolute;
+    top: 40%;
+    right: 20%;
+}
+
+.active {
     opacity: 1;
 }
 
-.tech-stack-icons.inactive {
+.inactive {
     opacity: 0;
 }
 
-.tech-stack.active {
-    display: block;
-}
-
-.tech-stack.inactive {
-    display: none;
-}
   

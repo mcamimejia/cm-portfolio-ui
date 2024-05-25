@@ -19,16 +19,20 @@
 }
 
 body {
-    align-items: center;
     background-image: url('../assets/Background.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: flex-end;
+}
+
+html, body, .page {
     width: 100%;
+    height: 100%;
+    transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+    -webkit-transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+    -moz-transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+    -o-transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+    overflow: hidden; 
 }
 
 a {
@@ -37,6 +41,15 @@ a {
 
 li {
     list-style-type: none;
+}
+
+.page {
+    position: absolute;
+    top: 5%;
+  }
+
+#p1, #p2, #p3 {
+left: 200%;
 }
 
 .logo{
@@ -121,6 +134,7 @@ li {
     position: fixed;
     top: 0;
     width: 150px;
+    z-index: 1
 }
 
 .tech-stack-icons {
@@ -141,8 +155,9 @@ li {
 }
 
 footer{
-    align-self: flex-end;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 .social {
@@ -162,6 +177,7 @@ footer{
 
 .social svg:hover {
     fill: var(--third);
+    transform: scale(1.2);
 }
 
 .copyright {
@@ -264,6 +280,12 @@ footer{
     position: absolute;
     top: 40%;
     right: 20%;
+    transition: 0.6s all ease;
+}
+
+.btn svg:hover {
+    fill: var(--third);
+    transform: scale(1.2);
 }
 
 .active {
@@ -274,4 +296,13 @@ footer{
     opacity: 0;
 }
 
-  
+
+#t1:target #p1,
+#t2:target #p2,
+#t3:target #p3 {
+  transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+  -moz-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
+  transition-delay: .6s !important;
+}

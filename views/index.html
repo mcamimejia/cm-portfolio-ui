@@ -14,9 +14,9 @@
                     <section class="sidebar">
                         <div class="logo"><a href="./home.html"><img src="../assets/CM-logo-2.png" alt="CM-logo"></a></div>
                         <ul class="nav-list">
-                            <li><a id="0" class="nav-item active" href="#t1" onclick="selectNavItem(0)">Home</a></li>
-                            <li><a id="1" class="nav-item" href="#t2"onclick="selectNavItem(1)">About</a></li>
-                            <li><a id="2" class="nav-item" href="#t3"onclick="selectNavItem(2)">Projects</a></li>
+                            <li><a id="1" class="nav-item" href="#t1" onclick="selectNavItem(1)">Home</a></li>
+                            <li><a id="2" class="nav-item" href="#t2" onclick="selectNavItem(2)">About</a></li>
+                            <li><a id="3" class="nav-item" href="#t3" onclick="selectNavItem(3)">Projects</a></li>
                             <li><a href="../assets/CV - Maria Camila Mejia.pdf" target="_blank">CV</a></li>
                         </ul>
                     </section>
@@ -153,8 +153,30 @@
 <script>
 
     window.onload = function() {
-        window.location.href += '#t1'
+        let currentURL = window.location.href;
+        if(currentURL.indexOf('#') === -1){
+            window.location.href += '#t1'
+            document.getElementById('1').className += ' active';
+        } else {
+            let navItems = document.querySelectorAll(".nav-item");
+            navItems.forEach(item => item.classList.remove('active'));
+
+            let navItemId = currentURL.substring(currentURL.indexOf('#') + 2);
+
+            let currentNavItem = document.getElementById(navItemId);
+            currentNavItem.className += ' active'; 
+        }
+
+        
     };
+
+    function selectNavItem(n){
+        let navItems = document.querySelectorAll(".nav-item");
+        navItems.forEach(item => item.classList.remove('active'));
+
+        let currentNavItem = document.getElementById(n);
+        currentNavItem.className += ' active'; 
+    }
 
     function changeSlide(){
         let slides = [document.getElementById("slide1"), document.getElementById("slide2")];
@@ -166,14 +188,6 @@
                 slide.className = slide.className.replace('active', 'inactive');
             }
         })
-    }
-
-    function selectNavItem(n){
-        let navItems = document.querySelectorAll(".nav-item");
-        navItems.forEach(item => item.classList.remove('active'));
-
-        let currentNavItem = document.getElementById(n);
-        currentNavItem.className += ' active'; 
     }
 </script>
 </html>

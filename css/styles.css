@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
     --principal:#17181f;
@@ -41,6 +42,10 @@ a {
 
 li {
     list-style-type: none;
+}
+
+h1, h2 {
+    font-family: "Playfair Display", serif;
 }
 
 .page {
@@ -104,16 +109,16 @@ left: 200%;
 }
 
 .profile-info h1{
-    font-size: 70pt;
+    font-size: 80pt;
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
+    filter: drop-shadow(30em 30em 30em --second);
 }
 
 .profile-info h2{
     font-size: 60pt;
-    font-style: italic;
     margin-top: -35px;
-    padding-right: 350px;
+    padding-right: 250px;
     text-align: center;
 }
 
